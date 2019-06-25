@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+
+    >.header {
+        height: 48px;
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: height .5s;
+
+        >label {
+            display: block;
+            color: white;
+            text-decoration: none;
+            position: absolute;
+            right: 0;
+            height: 48px;
+            width: 48px;
+            background: purple;
+            cursor: pointer;
+
+            .rotation {
+                display: block;
+                position: absolute;
+                width: 30px;
+                right: 9px;
+
+                transform-origin: right;
+                transition: transform .5s;
+
+                &:nth-child(1) {
+                    top: 16px;
+                }
+
+                &:nth-child(2) {
+                    bottom: 16px;
+                }
+            }
+
+            .bar {
+                display: block;
+                background: white;
+                height: 2px;
+                transition: height .2s;
+            }
+
+            &:hover {
+                .bar {
+                    height: 3px;
+                }
+            }
+        }
+
+        >.flyout {
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            height: calc(100% - 48px);
+            background: pink;
+        }
+    }
+
+    >.content {
+        margin-top: 48px;
+
+        >h1 {
+            font-size: 28px;
+            font-weight: 500;
+            padding: 16px 16px 8px 16px;
+        }
+
+        >h2 {
+            font-size: 24px;
+            font-weight: 300;
+            padding: 8px 16px;
+        }
+
+        >p {
+            padding: 8px 16px;
+            margin: 0;
+        }
+    }
+}
+
+html.menu-open {
+    overflow: hidden !important;
+    height: 100% !important;
+
+    >body {
+        overflow: hidden !important;
+        height: 100% !important;
+    }
+
+    .show-scrollbar {
+        overflow-y: scroll !important;
+    }
+
+    >body>.header {
+        height: 100%;
+
+        &>label>span {
+
+            &:nth-child(1) {
+                transform: rotate(-45deg) translateY(-5px);
+            }
+            &:nth-child(2) {
+                transform: rotate(45deg) translateY(5px);
+            }
+        }
+    }
+}

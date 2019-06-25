@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial", sans-serif;
+}
+
+body > .header {
+  height: 48px;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+}
+
+body > .header > label {
+  display: block;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  height: 48px;
+  width: 48px;
+  background: purple;
+  cursor: pointer;
+}
+
+body > .header > label .rotation {
+  display: block;
+  position: absolute;
+  width: 30px;
+  right: 9px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+body > .header > label .rotation:nth-child(1) {
+  top: 16px;
+}
+
+body > .header > label .rotation:nth-child(2) {
+  bottom: 16px;
+}
+
+body > .header > label .bar {
+  display: block;
+  background: white;
+  height: 2px;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+
+body > .header > label:hover .bar {
+  height: 3px;
+}
+
+body > .header > .flyout {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: calc(100% - 48px);
+  background: pink;
+}
+
+body > .content {
+  margin-top: 48px;
+}
+
+body > .content > h1 {
+  font-size: 28px;
+  font-weight: 500;
+  padding: 16px 16px 8px 16px;
+}
+
+body > .content > h2 {
+  font-size: 24px;
+  font-weight: 300;
+  padding: 8px 16px;
+}
+
+body > .content > p {
+  padding: 8px 16px;
+  margin: 0;
+}
+
+html.menu-open {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+html.menu-open > body {
+  overflow: hidden !important;
+  height: 100% !important;
+}
+
+html.menu-open .show-scrollbar {
+  overflow-y: scroll !important;
+}
+
+html.menu-open > body > .header {
+  height: 100%;
+}
+
+html.menu-open > body > .header > label > span:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translateY(-5px);
+          transform: rotate(-45deg) translateY(-5px);
+}
+
+html.menu-open > body > .header > label > span:nth-child(2) {
+  -webkit-transform: rotate(45deg) translateY(5px);
+          transform: rotate(45deg) translateY(5px);
+}
+/*# sourceMappingURL=index.css.map */
