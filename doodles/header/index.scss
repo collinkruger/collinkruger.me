@@ -16,7 +16,14 @@ body {
         right: 0;
         transition: height .5s;
 
-        >label {
+        >.title {
+            display: block;
+            color: white;
+            position: absolute;
+            left: 0;
+        }
+
+        >.menu-button {
             display: block;
             color: white;
             text-decoration: none;

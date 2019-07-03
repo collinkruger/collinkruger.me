@@ -20,7 +20,14 @@ body > .header {
   transition: height .5s;
 }
 
-body > .header > label {
+body > .header > .title {
+  display: block;
+  color: white;
+  position: absolute;
+  left: 0;
+}
+
+body > .header > .menu-button {
   display: block;
   color: white;
   text-decoration: none;
@@ -32,7 +39,7 @@ body > .header > label {
   cursor: pointer;
 }
 
-body > .header > label .rotation {
+body > .header > .menu-button .rotation {
   display: block;
   position: absolute;
   width: 30px;
@@ -45,15 +52,15 @@ body > .header > label .rotation {
   transition: transform .5s, -webkit-transform .5s;
 }
 
-body > .header > label .rotation:nth-child(1) {
+body > .header > .menu-button .rotation:nth-child(1) {
   top: 16px;
 }
 
-body > .header > label .rotation:nth-child(2) {
+body > .header > .menu-button .rotation:nth-child(2) {
   bottom: 16px;
 }
 
-body > .header > label .bar {
+body > .header > .menu-button .bar {
   display: block;
   background: white;
   height: 2px;
@@ -61,7 +68,7 @@ body > .header > label .bar {
   transition: height .2s;
 }
 
-body > .header > label:hover .bar {
+body > .header > .menu-button:hover .bar {
   height: 3px;
 }
 
